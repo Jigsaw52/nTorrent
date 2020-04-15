@@ -99,14 +99,14 @@ public class TorrentPeersInstance implements SessionInstance,
 							new Object[]{
 							selectedTorrentHash,
 							"", //dummy arg
-							"p.get_address=",
-							"p.get_client_version=", 
-							"p.get_down_rate=", 
-							"p.get_down_total=",
-							"p.get_up_rate=",
-							"p.get_up_total=",
-							"p.get_peer_rate=",
-							"p.get_peer_total="
+							"p.address=",
+							"p.client_version=",
+							"p.down_rate=",
+							"p.down_total=",
+							"p.up_rate=",
+							"p.up_total=",
+							"p.peer_rate=",
+							"p.peer_total="
 						}
 					);
 					int rowsRecieved = result.size();

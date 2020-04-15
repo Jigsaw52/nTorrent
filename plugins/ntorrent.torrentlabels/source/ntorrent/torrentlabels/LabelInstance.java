@@ -38,7 +38,7 @@ import ntorrent.torrenttable.view.TorrentTableJPopupMenu;
 @SuppressWarnings("unchecked")
 public class LabelInstance implements  SessionInstance, TorrentTableActionListener, TableModelListener, ListSelectionListener {
 	
-	public final static String PROPERTY = "d.get_custom1=";
+	public final static String PROPERTY = "d.custom1=";
 	
 	private final TorrentTableFilter labelFilter = new TorrentTableFilter();
 	

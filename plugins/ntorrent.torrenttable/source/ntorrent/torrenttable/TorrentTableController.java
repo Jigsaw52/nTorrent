@@ -68,20 +68,20 @@ public class TorrentTableController implements TorrentTableInterface, ListSelect
 		//populate downloadlist
 	    final String[] download_variable = {
                 "", //reserved for view arg
-                "d.get_hash=",  //ID
-                "d.get_name=", //constant
-                "d.get_state=",         //variable
-                "d.get_completed_bytes=", //variable
-                "d.get_up_total=",      //variable
-                "d.get_peers_complete=",
-                "d.get_peers_accounted=",
-                "d.get_down_rate=", //variable
-                "d.get_up_rate=", //variable
-                "d.get_message=", //relative
-                "d.get_priority=", //relative
-                "d.get_size_bytes=",
+                "d.hash=",  //ID
+                "d.name=", //constant
+                "d.state=",         //variable
+                "d.completed_bytes=", //variable
+                "d.up.total=",      //variable
+                "d.peers_complete=",
+                "d.peers_accounted=",
+                "d.down.rate=", //variable
+                "d.up.rate=", //variable
+                "d.message=", //relative
+                "d.priority=", //relative
+                "d.size_bytes=",
                 "d.is_hash_checking=",
-                "d.get_custom1=" // label
+                "d.custom1=" // label
 	    };
 	    
 	    for(String i : download_variable){

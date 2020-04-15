@@ -76,15 +76,15 @@ public class TorrentTrackersInstance implements SessionInstance, TorrentSelectio
 						new Object[]{
 							hash,
 							"", //dummy arg
-							"t.get_url=",
-							"t.get_group=", //unused?
-							"t.get_id=", //unused?
-							"t.get_min_interval=",
-							"t.get_normal_interval=",
-							"t.get_scrape_complete=",
-							"t.get_scrape_downloaded=",
-							"t.get_scrape_incomplete=",
-							"t.get_scrape_time_last=",
+							"t.url=",
+							"t.group=", //unused?
+							"t.id=", //unused?
+							"t.min_interval=",
+							"t.normal_interval=",
+							"t.scrape_complete=",
+							"t.scrape_downloaded=",
+							"t.scrape_incomplete=",
+							"t.scrape_time_last=",
 							"t.is_open=",
 							"t.is_enabled="
 						}
@@ -145,7 +145,7 @@ public class TorrentTrackersInstance implements SessionInstance, TorrentSelectio
 		final Tracker t = connection.getTrackerClient();
 		
 		//send the command
-		t.set_enabled(tracker.getHash(),tracker.getLocalId(),b ? 1 : 0);
+		t.set_enabled(tracker.getHash() + ":t" + tracker.getLocalId(), b ? 1 : 0);
 		
 		//update the list.
 		tracker.setEnabled(b);

@@ -42,5 +42,5 @@ public interface File {
   	Object get_size_bytes();
   	Object get_size_chunks();
   	Object multicall();
-  	Object set_priority(String hash, int offset, int value);
+  	Object set_priority(String hash, int value);
 }

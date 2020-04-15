@@ -100,14 +100,14 @@ public class TorrentFilesInstance implements SessionInstance,TorrentSelectionLis
 						new Object[]{
 						hash,
 						"",
-						"f.get_path_components=",
-						"f.get_priority=",
-						"f.get_completed_chunks=",
-						"f.get_size_chunks=",
-						"f.get_size_bytes=",
+						"f.path_components=",
+						"f.priority=",
+						"f.completed_chunks=",
+						"f.size_chunks=",
+						"f.size_bytes=",
 						/*"f.get_is_created=", this api was changed in 0.8.0, must therefore be removed until a more stable api is out.
 						"f.get_is_open=",*/  
-						"f.get_last_touched=",
+						"f.last_touched=",
 						});
 			
 				//System.out.println(result);
@@ -192,7 +192,7 @@ public class TorrentFilesInstance implements SessionInstance,TorrentSelectionLis
 							if(hash == null)
 								hash = tf.getParentHash();
 							//System.out.println(hash+" "+x+" "+tf.getOffset());
-							f.set_priority(hash,tf.getOffset(), x);
+							f.set_priority(hash + ":f" + tf.getOffset(), x);
 							((Priority)treeModel.getValueAt(tf, 0)).setPriority(x);
 						}
 						
